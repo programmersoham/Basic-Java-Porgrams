@@ -1,37 +1,59 @@
 class Bank
-{
-    int Cust_ID;
-    String Cust_Name;
-    
-    String Acc_Type;
-    double Acc_Balance;
-    
-    Bank(int id, String Cust_Name, String Acc_Type, double Acc_Balance)
     {
-        Cust_ID = id;     
-        Cust_Name = Cust_Name;
-        Acc_Type = Acc_Type;
-        Acc_Balance = Acc_Balance;
+         String name;
+         String type;
+         int custID;
+        double bal;
+        Bank(String m,String cl,int c,double w)
+        {
+            name=m;
+            type=cl;
+            custID=c;
+            bal=w;
+
+        }
+        void display()
+        {
+            System.out.println("Welcome " + name+"! . your accouont type is "+type+". Your custID is "+ custID + ". Your bal is "+ bal);
+
+        }
+        void balance()
+        {
+            System.out.println("Hello " + name + " your balance is "+ bal);
+        }
+
+        void withdraw(double a)
+        {
+             a=a;
+             bal=bal-a;
+        }
+        void deposite(double b)
+        {
+            b=b;
+            bal=bal+b;
+        }
+
+
+
+
     }
-    
-    void Print()
+public class BasicBank{
+    public static void main(String args[]) 
     {
-        System.out.println("Hello  "+Cust_Name+" Your id is "+Cust_ID+" "+"Your Accout type is  "+Acc_Type+"Your balance is "+Acc_Balance);
-    }
-}
-public class TestBank 
-{
-    public static void main(String args[])
-    {
-        Bank C1 = new Bank(001,"Richard","Savaing Account",100000);
-        Bank C2 = new Bank(502,"Gilfoyle","Current Account",100000);
-        Bank C3 = new Bank(150,"Donald","Recurring Deposite Account",100000);
+       Bank c1=new Bank("Ramesh", "saving", 501, 10000);
+       Bank c2=new Bank("Suresh", "current", 404, 10000);
+    //    c1.SetValue();
+    //    c2.SetValue();
+       c1.display();
+       c2.display();
+
+       c1.withdraw(1);
+       c2.deposite(1);
+       c1.balance();
+       c2.balance();
         
-        System.out.println("Custmor ID "+" Cust_Name "+" Acc_Type "+" Acc_Balance");
+
         
-        // C1.Print();
-        // C2.Print();
-        // C3.Print();
-       
     }
+    
 }

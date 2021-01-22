@@ -1,1 +1,1 @@
-System.out
+acc_t
