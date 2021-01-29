@@ -42,8 +42,7 @@ public class BasicBank{
     {
        Bank c1=new Bank("Ramesh", "saving", 501, 10000);
        Bank c2=new Bank("Suresh", "current", 404, 10000);
-    //    c1.SetValue();
-    //    c2.SetValue();
+    
        c1.display();
        c2.display();
 
